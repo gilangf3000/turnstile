@@ -1,0 +1,33 @@
+{
+  "name": "turnstile",
+  "version": "1.0.0",
+  "description": "cloudflare turnstile solver api in node.js",
+  "author": "gilangf3000",
+  "license": "MIT",
+  "keywords": [
+    "turnstile",
+    "cloudflare",
+    "solver",
+    "playwright",
+    "nodejs"
+  ],
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilangf3000/turnstile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gilangf3000/turnstile/issues"
+  },
+  "homepage": "https://github.com/gilangf3000/turnstile",
+  "scripts": {
+    "setup": "bash setup.sh",
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "check": "node --check src/index.js && node --check src/server/createServer.js && node --check src/solver/TurnstileSolver.js && node --check src/config/loadConfig.js && node --check src/utils/userAgents.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "playwright": "^1.53.0"
+  }
+}
